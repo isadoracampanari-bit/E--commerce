@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Carrinho de Compras - Sephora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-area"><a href="index.html" class="brand-name">Sephora</a></div>
+            <nav class="main-nav">
+                <a href="index.html">Início</a>
+            </nav>
+            <div class="sephora-icons-row">
+                <a href="cadastro.html" class="sephora-icon-button"><span class="sephora-icon-label-text bold-uppercase">MINHA CONTA</span></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="cart-container" style="max-width: 1200px; margin: 30px auto; padding: 0 20px; display: flex; gap: 30px; flex-wrap: wrap;">
+        <!-- Tabela do Carrinho -->
+        <section style="flex: 2; min-width: 600px;">
+            <table class="cart-table" style="width: 100%; border-collapse: collapse;">
+                <caption style="font-size: 24px; font-weight: bold; text-align: left; padding-bottom: 15px; caption-side: top;">Sua Sacola de Compras</caption>
+                <thead>
+                    <tr style="border-bottom: 2px solid #000; text-align: left;">
+                        <th scope="col" style="padding: 10px;">Produto</th>
+                        <th scope="col" style="padding: 10px;">Preço Unitário</th>
+                        <th scope="col" style="padding: 10px;">Quantidade</th>
+                        <th scope="col" style="padding: 10px;">Subtotal</th>
+                        <th scope="col" style="padding: 10px; text-align: center;">Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <td style="padding: 15px; display: flex; align-items: center; gap: 15px;">
+                            <img src="oi.jpg" alt="Miniatura Item 1" style="width: 64px; height: 64px; object-fit: cover;">
+                            <div>
+                                <span style="font-weight: bold; display: block;">Gloss Outrageous Intense</span>
+                                <small style="color: #777;">Sephora Collection</small>
+                            </div>
+                        </td>
+                        <td style="padding: 15px;">R$ 89,90</td>
+                        <td style="padding: 15px;"><input type="number" min="1" value="1" style="width: 50px; padding: 5px;"></td>
+                        <td style="padding: 15px; font-weight: bold;">R$ 89,90</td>
+                        <td style="padding: 15px; text-align: center;"><button aria-label="Remover item" style="background: none; border: none; cursor: pointer; font-size: 18px;">🗑️</button></td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <td style="padding: 15px; display: flex; align-items: center; gap: 15px;">
+                            <img src="img/images (2).jpg" alt="Miniatura Item 2" style="width: 64px; height: 64px; object-fit: cover;">
+                            <div>
+                                <span style="font-weight: bold; display: block;">Paleta Shadow Pro</span>
+                                <small style="color: #777;">Olhos & Paletas</small>
+                            </div>
+                        </td>
+                        <td style="padding: 15px;">R$ 199,00</td>
+                        <td style="padding: 15px;"><input type="number" min="1" value="1" style="width: 50px; padding: 5px;"></td>
+                        <td style="padding: 15px; font-weight: bold;">R$ 199,00</td>
+                        <td style="padding: 15px; text-align: center;"><button aria-label="Remover item" style="background: none; border: none; cursor: pointer; font-size: 18px;">🗑️</button></td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <td style="padding: 15px; display: flex; align-items: center; gap: 15px;">
+                            <img src="img/532037_4_COLORFUL_LUMINIZER_COMPO_08_2025_1000px.avif" alt="Miniatura Item 3" style="width: 64px; height: 64px; object-fit: cover;">
+                            <div>
+                                <span style="font-weight: bold; display: block;">Colorful Luminizer Blush</span>
+                                <small style="color: #777;">Blushes & Iluminadores</small>
+                            </div>
+                        </td>
+                        <td style="padding: 15px;">R$ 119,00</td>
+                        <td style="padding: 15px;"><input type="number" min="1" value="1" style="width: 50px; padding: 5px;"></td>
+                        <td style="padding: 15px; font-weight: bold;">R$ 119,00</td>
+                        <td style="padding: 15px; text-align: center;"><button aria-label="Remover item" style="background: none; border: none; cursor: pointer; font-size: 18px;">🗑️</button></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="5" style="padding: 15px; background: #f5f5f5; color: green; font-weight: bold; text-align: right;">
+                            🎉 Parabéns! Você ganhou Frete Grátis nesta compra.
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <!-- Card Lateral de Resumo -->
+        <aside class="order-summary" style="flex: 1; min-width: 300px; background: #fafafa; border: 1px solid #ddd; padding: 20px; height: fit-content;">
+            <h2 style="font-size: 20px; border-bottom: 1px solid #ccc; padding-bottom: 10px; margin-bottom: 15px;">Resumo do Pedido</h2>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 10px;"><span>Subtotal:</span><strong>R$ 407,90</strong></div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 15px;"><span>Frete:</span><strong style="color: green;">GRÁTIS</strong></div>
+            
+            <div style="margin-bottom: 20px;">
+                <label for="coupon" style="display: block; font-size: 12px; margin-bottom: 5px; font-weight: bold;">Cupom de Desconto:</label>
+                <div style="display: flex; gap: 5px;">
+                    <input type="text" id="coupon" placeholder="Digite seu cupom" style="flex: 1; padding: 8px; border: 1px solid #ccc;">
+                    <button style="background: #000; color: #fff; padding: 8px 12px; border: none; cursor: pointer;">Aplicar</button>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; font-size: 18px; font-weight: bold; border-top: 1px solid #ccc; padding-top: 15px; margin-bottom: 25px;">
+                <span>Valor Total:</span><span>R$ 407,90</span>
+            </div>
+
+            <a href="cadastro.html" class="btn-checkout" style="display: block; background: #ff0055; color: #fff; text-align: center; padding: 15px; font-weight: bold; text-decoration: none; text-transform: uppercase;">Finalizar Compra →</a>
+        </aside>
+    </main>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gloss Outrageous Intense - Sephora Collection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Repetição do Cabeçalho Padrão -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-area"><a href="index.html" class="brand-name">Sephora</a></div>
+            <nav class="main-nav">
+                <a href="index.html">Início</a>
+                <a href="index.html#paletas">Paletas</a>
+                <a href="index.html#blushes">Blushes & Iluminadores</a>
+                <a href="index.html#pele">Base & Pele</a>
+            </nav>
+            <div class="sephora-icons-row">
+                <a href="cadastro.html" class="sephora-icon-button"><span class="sephora-icon-label-text bold-uppercase">MINHA CONTA</span></a>
+                <a href="carrinho.html" class="sephora-icon-button">🛒</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="product-detail-container" style="max-width: 1200px; margin: 20px auto; padding: 0 20px;">
+        <!-- Breadcrumb / Trilha de Navegação -->
+        <nav class="breadcrumb" style="margin-bottom: 20px; font-size: 14px; color: #666;">
+            <a href="index.html" style="color: #000; text-decoration: none;">Início</a> &gt; 
+            <a href="#" style="color: #000; text-decoration: none;">Maquiagem</a> &gt; 
+            <a href="#" style="color: #000; text-decoration: none;">Lábios</a> &gt; Gloss
+        </nav>
+
+        <!-- Layout de Duas Colunas -->
+        <div class="product-view-columns" style="display: flex; gap: 40px; flex-wrap: wrap;">
+            <!-- Coluna da Esquerda: Galeria -->
+            <div class="gallery-column" style="flex: 1; min-width: 300px;">
+                <div class="main-image-wrapper" style="aspect-ratio: 1 / 1; background: #f9f9f9; border: 1px solid #eee; margin-bottom: 15px;">
+                    <img src="oi.jpg" alt="Gloss Principal Grande" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="thumbnails-row" style="display: flex; gap: 10px;">
+                    <img src="oi.jpg" class="thumb" alt="Miniatura 1" style="width: 75px; height: 75px; object-fit: cover; border: 1px solid #ccc; cursor: pointer;">
+                    <img src="oi.jpg" class="thumb" alt="Miniatura 2" style="width: 75px; height: 75px; object-fit: cover; border: 1px solid #ccc; cursor: pointer;">
+                    <img src="oi.jpg" class="thumb" alt="Miniatura 3" style="width: 75px; height: 75px; object-fit: cover; border: 1px solid #ccc; cursor: pointer;">
+                </div>
+            </div>
+
+            <!-- Coluna da Direita: Informações de Venda -->
+            <div class="info-column" style="flex: 1; min-width: 300px;">
+                <span style="font-weight: bold; text-transform: uppercase; font-size: 12px; letter-spacing: 1px;">Sephora Collection</span>
+                <h1 style="margin: 10px 0; font-size: 28px;">Gloss Outrageous Intense Plump Effect</h1>
+                <div class="rating" style="color: #ffcc00; margin-bottom: 15px;">★★★★★ <span style="color:#666; font-size:14px;">(4.8 de 5 avaliações)</span></div>
+                
+                <div class="prices" style="margin-bottom: 20px;">
+                    <span style="text-decoration: line-through; color: #999; margin-right: 10px;">R$ 164,00</span>
+                    <span style="font-size: 24px; font-weight: bold; color: #ff0055;">R$ 89,90</span>
+                </div>
+
+                <div class="options-selector" style="margin-bottom: 25px;">
+                    <label for="color-select" style="display: block; font-weight: bold; margin-bottom: 5px;">Selecione a Cor / Volume:</label>
+                    <select id="color-select" style="width: 100%; padding: 12px; border: 1px solid #000; font-size: 16px;">
+                        <option>01 Universal Volume - Transparente</option>
+                        <option>02 Nude Plump - Rosado</option>
+                        <option>05 Spicy Sienna - Terracota</option>
+                    </select>
+                </div>
+
+                <a href="carrinho.html" class="btn-add-to-cart" style="display: block; background: #000; color: #fff; text-align: center; padding: 15px; font-weight: bold; text-transform: uppercase; text-decoration: none; transition: background 0.3s;">Adicionar ao Carrinho</a>
+            </div>
+        </div>
+
+        <!-- Tabela Semântica de Especificações Técnicas -->
+        <section class="tech-specs" style="margin-top: 50px;">
+            <h2 style="border-bottom: 2px solid #000; padding-bottom: 10px; margin-bottom: 20px;">Especificações Técnicas</h2>
+            <table class="specs-table" style="width: 100%; border-collapse: collapse; text-align: left;">
+                <tbody>
+                    <tr>
+                        <th scope="row" style="padding: 12px; border-bottom: 1px solid #eee;">Marca</th>
+                        <td style="padding: 12px; border-bottom: 1px solid #eee;">Sephora Collection</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" style="padding: 12px; border-bottom: 1px solid #eee;">Volume / Peso</th>
+                        <td style="padding: 12px; border-bottom: 1px solid #eee;">6 ml</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" style="padding: 12px; border-bottom: 1px solid #eee;">Efeito</th>
+                        <td style="padding: 12px; border-bottom: 1px solid #eee;">Plumping / Volume Intenso e Brilho Espelhado</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" style="padding: 12px; border-bottom: 1px solid #eee;">Garantia de Fábrica</th>
+                        <td style="padding: 12px; border-bottom: 1px solid #eee;">30 dias contra defeitos de fabricação</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" style="padding: 12px; border-bottom: 1px solid #eee;">Origem</th>
+                        <td style="padding: 12px; border-bottom: 1px solid #eee;">Importado (França)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer style="background: #000; color: #fff; text-align: center; padding: 20px; margin-top: 40px;">
+        <p>&copy; 2026 Sephora Cosméticos Brasil Ltda.</p>
+    </footer>
+</body>
+</html>

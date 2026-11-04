@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sephora Collection | Finalizar Compra</title>
+    <!-- Link para FontAwesome para os ícones de pagamento (Pix, Visa, Mastercard, Boleto) -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        :root {
+            --sephora-black: #000000;
+            --sephora-gray-dark: #1c1c1c;
+            --sephora-gray-light: #f6f6f6;
+            --sephora-border: #cccccc;
+            --success-color: #008a5b; /* Verde Sephora para validação positiva */
+            --error-color: #d90429;    /* Vermelho vibrante para erros */
+            --text-color: #000000;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: var(--text-color);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .checkout-container {
+            width: 100%;
+            max-width: 750px;
+            background: #ffffff;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 1.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+            color: var(--sephora-black);
+            border-bottom: 2px solid var(--sephora-black);
+            padding-bottom: 15px;
+        }
+
+        fieldset {
+            border: 1px solid var(--sephora-border);
+            border-radius: 0; /* Design Sephora usa bordas retas */
+            padding: 30px;
+            margin-bottom: 35px;
+            background-color: #ffffff;
+        }
+
+        legend {
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 0 15px;
+            color: var(--sephora-black);
+            font-size: 0.95rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        label {
+            margin-bottom: 8px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Estilização Base dos Inputs no Padrão Sephora */
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="password"],
+        input[type="date"],
+        select {
+            padding: 12px 14px;
+            border: 1px solid var(--sephora-border);
+            border-radius: 0; /* Bordas retas */
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+            background-color: #ffffff;
+        }
+
+        /* Requisito 3: Pseudo-classes de Estilização Avançada e Validação */
+        input:focus, select:focus {
+            border-color: var(--sephora-black);
+            box-shadow: 0 0 0 1px var(--sephora-black);
+        }
+
+        input:focus:valid, select:focus:valid {
+            border-color: var(--success-color);
+            box-shadow: 0 0 0 1px var(--success-color);
+        }
+
+        input:focus:invalid, select:focus:invalid {
+            border-color: var(--error-color);
+            box-shadow: 0 0 0 1px var(--error-color);
+        }
+
+        input[type="file"] {
+            padding: 8px 0;
+            font-size: 0.85rem;
+        }
+
+        /* Estilização Exclusiva do Bloco de Pagamento (Visual Clean) */
+        .payment-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .payment-item {
+            position: relative;
+        }
+
+        .payment-label {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 20px;
+            border: 1px solid var(--sephora-border);
+            border-radius: 0;
+            cursor: pointer;
+            background: #ffffff;
+            transition: all 0.2s ease;
+        }
+
+        .payment-label:hover {
+            background-color: var(--sephora-gray-light);
+        }
+
+        .payment-info {
+            display: flex;
+            align-items: center;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .payment-icons i {
+            font-size: 1.8rem;
+            color: var(--sephora-gray-dark);
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+
+        /* Marcador ativo customizado quando selecionado */
+        input[type="radio"]:checked + .payment-label {
+            border: 2px solid var(--sephora-black);
+            background-color: var(--sephora-gray-light);
+        }
+
+        /* Esconde estruturalmente o input mantendo acessível à W3C */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        /* Termos de uso e Botão Principal Sacola/Checkout */
+        .terms-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-top: 10px;
+            margin-bottom: 35px;
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+
+        .terms-container input {
+            width: 18px;
+            height: 18px;
+            margin-top: 2px;
+            cursor: pointer;
+            border-radius: 0;
+            accent-color: var(--sephora-black);
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 20px;
+            background-color: var(--sephora-black);
+            color: #ffffff;
+            border: none;
+            border-radius: 0;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #333333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="checkout-container">
+        <h1>Finalizar Compra</h1>
+
+        <form action="#" method="POST" enctype="multipart/form-data">
+            
+            <!-- BLOCO 1: DADOS PESSOAIS -->
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                
+                <div class="form-group">
+                    <label prejudices for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required placeholder="seu-email@dominio.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="cpf">CPF</label>
+                        <input type="text" id="cpf" name="cpf" required 
+                               pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" 
+                               placeholder="000.000.000-00" 
+                               title="Digite o CPF no formato 000.000.000-00">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="telefone">Telefone / WhatsApp</label>
+                        <input type="tel" id="telefone" name="telefone" required placeholder="(11) 99999-9999">
+                    </div>
+                    <div class="form-group">
+                        <label for="nascimento">Data de Nascimento</label>
+                        <input type="date" id="nascimento" name="nascimento" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="senha">Criar Senha de Acesso</label>
+                    <input type="password" id="senha" name="senha" required minlength="6" placeholder="Mínimo de 6 caracteres">
+                </div>
+
+                <div class="form-group">
+                    <label for="avatar">Foto de Perfil / Avatar (Opcional)</label>
+                    <input type="file" id="avatar" name="avatar" accept="image/*">
+                </div>
+            </fieldset>
+
+            <!-- BLOCO 2: ENDEREÇO DE ENTREGA -->
+            <fieldset>
+                <legend>Endereço de Entrega</legend>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cep">CEP</label>
+                        <input type="text" id="cep" name="cep" required pattern="\d{5}-?\d{3}" placeholder="00000-000">
+                    </div>
+                    <div class="form-group" style="grid-column: span 2;">
+                        <label for="rua">Rua / Logradouro</label>
+                        <input type="text" id="rua" name="rua" required placeholder="Ex: Av. Paulista">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="numero">Número</label>
+                        <input type="text" id="numero" name="numero" required placeholder="123">
+                    </div>
+                    <div class="form-group">
+                        <label for="complemento">Complemento</label>
+
+

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sephora Collection | Vitrine Glow  Beauty</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-area">
+                <a href="index.html" class="brand-name">Sephora</a>
+            </div>
+            
+            <nav class="main-nav">
+                <a href="imagem.jpg.jpg">Acessórios</a>
+                <a href="#paletas">Paletas</a>
+                <a href="#blushes">Blushes & Iluminadores</a>
+                <a href="#pele">Base & Pele</a>
+            </nav>
+            <div class="cart-icon" aria-label="Sacola de compras"></div>
+              <!-- REPLICA EXATA DOS ÍCONES DA SEPHORA -->
+<div class="sephora-icons-row">
+    
+    <!-- 1. Balão de Atendimento (...) -->
+    <button class="sephora-icon-button" aria-label="Atendimento">
+        <svg class="svg-sephora-asset" viewBox="0 0 40 40" width="28" height="28">
+            <path fill="none" stroke="#1c1c1c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M33,18.5 C33,25.4 27.2,31 20,31 C18.1,31 16.3,30.6 14.7,29.9 L6,32 L7.2,24.9 C6.4,23 6,20.8 6,18.5 C6,11.6 11.8,6 19,6 C26.2,6 33,11.6 33,18.5 Z"/>
+            <circle cx="14" cy="18.5" r="1.5" fill="#1c1c1c"/>
+            <circle cx="20" cy="18.5" r="1.5" fill="#1c1c1c"/>
+            <circle cx="26" cy="18.5" r="1.5" fill="#1c1c1c"/>
+        </svg>
+    </button>
+
+    <!-- 2. Lojas e Serviços -->
+    <button class="sephora-icon-button" aria-label="Lojas e Serviços">
+        <svg class="svg-sephora-asset" viewBox="0 0 40 40" width="28" height="28">
+            <!-- Teto/Aba da loja -->
+            <path fill="none" stroke="#1c1c1c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M5,16 L35,16 M5,11 L35,11 M5,11 L8,5 L32,5 L35,11"/>
+            <!-- Corpo e colunas internas da fachada -->
+            <path fill="none" stroke="#1c1c1c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M7,16 L7,33 L33,33 L33,16 M14,33 L14,22 L26,22 L26,33 M20,22 L20,33"/>
+        </svg>
+        <span class="sephora-icon-label-text">Lojas e<br>Serviços</span>
+    </button>
+
+    <!-- 3. Minha Conta / Favoritos -->
+    <a href="cadastro.html" class="sephora-icon-button" aria-label="Minha Conta" style="text-decoration: none; color: inherit; display:  flex; align-items: center; gap:5px;">
+        <svg class="svg-sephora-asset" viewBox="0 0 40 40" width="28" height="28">
+            <path fill="none" stroke="#1c1c1c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M20,32.5 L17.8,30.5 C10,23.4 5,18.9 5,13.3 C5,8.7 8.6,5.1 13.2,5.1 C15.8,5.1 18.3,6.3 20,8.2 C21.7,6.3 24.2,5.1 26.8,5.1 C31.4,5.1 35,8.7 35,13.3 C35,18.9 30,23.4 22.2,30.5 L20,32.5 Z"/>
+        </svg>
+        <span class="sephora-icon-label-text bold-uppercase">MINHA CONTA</span>
+    </a>
+
+    <!-- 4. Caixa Beautyclub -->
+    <div class="sephora-beautyclub-box">
+        <span class="bc-row-top">Pontos Beautyclub:</span>
+        <span class="bc-row-bottom">Faça login e descubra</span>
+    </div>
+
+    <!-- 5. Sacola de Compras Aramada -->
+    <a href="carrinho.html" class="sephora-icon-button" aria-label="Sacola de compras">
+        <svg class="svg-sephora-asset" viewBox="0 0 40 40" width="28" height="28">
+            <!-- Alça superior -->
+            <path fill="none" stroke="#1c1c1c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M13,16 L13,11 C13,7.1 16.1,4 20,4 C23.9,4 27,7.1 27,11 L27,16"/>
+            <!-- Cesta base -->
+            <path fill="none" stroke="#1c1c1c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M6,16 L34,16 L31,34 L9,34 Z"/>
+            <!-- Linhas horizontais internas da cesta -->
+            <path fill="none" stroke="#1c1c1c" stroke-width="1.8" d="M7,22 L33,22 M8,28 L32,28"/>
+        </svg>
+    </a>
+
+</div>
+
+        </div>
+    </header>
+
+    <main>
+        
+        <section class="hero-carousel" aria-label="Destaques e Campanhas de Beleza">
+            <div class="carousel-track">
+                <div class="carousel-slide" id="slide-1">
+                    <img src="img/Sephora.jpg" width="1200" height="400" alt="Banner Campanha Especial: Conheça as novas coleções de Paletas Sephora.">
+                </div>
+                <div class="carousel-slide" id="slide-2">
+                    <img src="acessorios.png" width="1200" height="400" alt="Banner de maquiagens exclusivas dispostas em uma bancada sofisticada com pincéis premium.">
+                </div>
+                <div class="carousel-slide" id="slide-3">
+                    <img src="img/" width="1200" height="400" alt="Banner de cuidados com a pele e bases fluidas de alta performance.">
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. NAVEGAÇÃO POR CATEGORIAS CORRIGIDA (Sem links quebrados) -->
+<section class="bubble-categories-section">
+    <div class="bubbles-container">
+        
+        <a href="#" class="bubble-item">
+            <div class="bubble-img-holder alert-red">OFERTAS</div>
+            <span>OFERTAS ATÉ 60% OFF</span>
+        </a>
+
+        <a href="#" class="bubble-item">
+            <!-- Corrigido: Agora usa um círculo estilizado em CSS texturizado -->
+            <div class="bubble-img-holder bg-elf">e.l.f.</div>
+            <span>E.L.F. COSMETICS</span>
+        </a>
+
+        <a href="#" class="bubble-item">
+            <div class="bubble-img-holder bg-dark">NEW</div>
+            <span>NOVIDADES</span>
+        </a>
+
+        <a href="#" class="bubble-item">
+            <!-- Corrigido: Agora usa um círculo estilizado com as listras da Sephora -->
+            <div class="bubble-img-holder bg-sephora">S</div>
+            <span>SEPHORA COLLECTION</span>
+        </a>
+
+        <a href="#" class="bubble-item">
+            <div class="bubble-img-holder bg-dark"></div>
+            <span>GUIA DE COMPRAS</span>
+        </a>
+
+        <a href="#" class="bubble-item">
+            <div class="bubble-img-holder bg-dark"></div>
+            <span>APP SEPHORA</span>
+        </a>
+
+    </div>
+</section>
+
+
+    <section class="categories-section">
+            <h2>Compre por Categoria</h2>
+            <div class="categories-grid">
+                <a href="#acessorios" class="category-item">
+                    <img src="imagem.jpg.jpg" width="150" height="150" alt="Categoria Acessórios e Pincéis de Maquiagem.">
+                    <span>Acessórios</span>
+                </a>
+                <a href="#paletas" class="category-item">
+                    <img src="img/images (2).jpg" width="150" height="150" alt="Categoria Paletas de Sombras Oculares Metálicas.">
+                    <span>Paletas de Olhos</span>
+                </a>
+                <a href="#blushes" class="category-item">
+                    <img src="img/532037_4_COLORFUL_LUMINIZER_COMPO_08_2025_1000px.avif" width="150" height="150" alt="Categoria Blushes e Iluminadores Compactos.">
+                    <span>Blushes & Iluminadores</span>
+                </a>
+                <a href="#pele" class="category-item">
+                    <img src="img/images (3).jpg" width="150" height="150" alt="Categoria Bases e Corretivos Faciais de Alta Cobertura.">
+                    <span>Bases & Pele</span>
+                </a>
+            </div>
+        </section>
+        <section class="showcase-section">
+            <h2>Os Mais Desejados</h2>
+            <div class="products-grid">
+                
+                
+                <article class="product-card" id="acessorios">
+                    <span class="badge-discount">-45% OFERTA</span>
+                    <figure class="product-image-container">
+                        <img src="oi.jpg" width="300" height="300" loading="lazy" alt="">
+                    </figure>
+                    <figcaption class="product-info">
+                        <span class="brand-tag">Sephora Collection</span>
+                        <h3> Gloss sephora collection</h3>
+                        <div class="price-block">
+                            <span class="old-price">R$ 164,00</span>
+                            <span class="current-price">R$ 89,00</span>
+                        </div>.
+                        <p class="installment">7x de R$ 12,71</p>
+                        <div class="rating-stars">★★★★★</div>
+                        <button class="btn-buy"><a href="produto.html">Adicionar à Sacola</a></button>
+                    </figcaption>
+                </article>
+
+
+                <article class="product-card" id="paletas">
+                    <span class="badge-discount">-41% OFERTA</span>
+                    <div class="badge-gift">GANHE<br>BRINDE</div>
+                    <figure class="product-image-container">
+                        <img src="img/images (1).jpg" width="300" height="300" loading="lazy" alt="">
+                    </figure>
+                    <figcaption class="product-info">
+                        <span class="brand-tag">Sephora Collection</span>
+                        <h3>Power Grip Primer Elf</h3>
+                        <div class="price-block">
+                            <span class="old-price">R$ 220,00</span>
+                            <span class="current-price">R$ 129,00</span>
+                        </div>
+                        <p class="installment">11x de R$ 11,73</p>
+                        <div class="rating-stars">★★★★☆</div>
+                        <button class="btn-buy">Adicionar à Sacola</button>
+                    </figcaption>
+                </article>
+
+                
+                <article class="product-card" id="blushes">
+                    <span class="badge-discount">-41% OFERTA</span>
+                    <div class="badge-gift">GANHE<br>BRINDE</div>
+                    <figure class="product-image-container">
+                        <img src="img/Y0000163_E000001063_E01_RHC.webp" width="300" height="300" loading="lazy" alt="">
+                    </figure>
+                    <figcaption class="product-info">
+                        <span class="brand-tag">Sephora Collection</span>
+                        <h3>Dior Addict Lip Glow Oil</h3>
+                        <div class="price-block">
+                            <span class="old-price">R$ 220,00</span>
+                            <span class="current-price">R$ 129,00</span>
+                        </div>
+                        <p class="installment">11x de R$ 11,73</p>
+                        <div class="rating-stars">★★★★★</div>
+                        <button class="btn-buy">Adicionar à Sacola</button>
+                    </figcaption>
+                </article>
+
+                <article class="product-card" id="blushes">
+                    <span class="badge-discount">-30% OFERTA</span>
+                    <figure class="product-image-container">
+                        <img src="img/images.jpg" width="300" height="300" loading="lazy" alt="Linha completa de preparação de pele Fenty Beauty contendo base fluida mate, corretivo de alta cobertura, spray fixador e primer.">
+                    </figure>
+                    <figcaption class="product-info">
+                        <span class="brand-tag">Fenty Beauty</span>
+                        <h3>Benefit Cookie Iluminador</h3>
+                        <div class="price-block">
+                            <span class="old-price">R$ 142,00</span>
+                            <span class="current-price">R$ 99,00</span>
+                        </div>
+                        <p class="installment">8x de R$ 12,38</p>
+                        <div class="rating-stars">★★★★★</div>
+                        <button class="btn-buy">Adicionar à Sacola</button>
+                    </figcaption>
+                </article>
+
+               
+                <article class="product-card">
+                    <figure class="product-image-container">
+                        <img src="img/501487_Contour eye pencil 12H wear_01_ensemble_BD_1000px.avif" width="300" height="300" loading="lazy" alt="">
+                    </figure>
+                    <figcaption class="product-info">
+                        <span class="brand-tag">Sephora Collection</span>
+                        <h3>Lapís de olhos á prova d'água</h3>
+                        <div class="price-block">
+                            <span class="current-price">R$ 29,90</span>
+                        </div>
+                        <p class="installment">À vista no Pix</p>
+                        <div class="rating-stars">★★★☆☆</div>
+                        <button class="btn-buy">Adicionar à Sacola</button>
+                    </figcaption>
+                </article>
+
+                
+                <article class="product-card sold-out">
+                    <figure class="product-image-container">
+                        <span class="badge-sold-out">ESGOTADO</span>
+                        <img src="img/watermelon_glow_niacinamide_dew_drops_glow_recipe_3653_1_5a32e5438d73ad2b2cc1507af4ff60c1.webp" width="300" height="300" loading="lazy" alt="">
+                    </figure>
+                    <figcaption class="product-info">
+                        <span class="brand-tag">Sephora Collection</span>
+                        <h3>Watermelon Glow Recipe</h3>
+                        <div class="price-block">
+                            <span class="price-unavailable">Indisponível</span>
+
+    </main>
+
+    
+</body>
+</html>
